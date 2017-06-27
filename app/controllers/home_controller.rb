@@ -7,10 +7,8 @@ class HomeController < ApplicationController
 
   def products
     @products = Product.all.order(price: :desc)
-    
   end
 
   def about
-
   end
 end

@@ -1,25 +1,24 @@
 
 <div class="container">
-<h1>All products</h1>
-<br>
-<table class="table">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Product</th>
-      <th>Price</th>
-
-    </tr>
-  </thead>
-  <thead>
-  <tbody>
-    <% @products.each do |product| %>
-    <tr>
-      <th scope="row"><%= product.id %></th>
-      <td><%= product.name %></td>
-      <td><%= product.price %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+  <h1>All products</h1>
+  <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Product</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <% @products.each do |product| %>
+      <tr>
+        <th scope="row"><%= product.id %></th>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
