@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
   def index
-    @welcome_message = 'Welcome to ruby on rails'
-    @broj = 1
+    @title_message = 'Ruby on Rails for beginners 2017'
+    @subtitle_message = 'Web shop demo application'
+
   end
 
   def products
