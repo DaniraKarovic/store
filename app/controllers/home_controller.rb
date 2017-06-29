@@ -10,5 +10,6 @@ class HomeController < ApplicationController
   end
 
   def about
+    @about = 'About'
   end
 end

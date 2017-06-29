@@ -2,6 +2,6 @@
   <div class="jumbotron">
     <h1><%= @title_message %></h1>
     <h2><%= @subtitle_message %></h2>
-    <p>You can choose from <%= @product_count%> different products. <a href="/products">Start shopping now!</a></p>
+    <p>You can choose from <%= @product_count%> different products.<%= link_to " Start shopping now!", products_path%></p>
   </div>
 </div>
