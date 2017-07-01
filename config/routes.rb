@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   # get '/test', controller: 'home', action: 'test'
   # get '/test' => 'home#test', as: 'nesto'
 
-  get '/products' => 'home#products'
-  get '/about' => 'home#about'
+  # get '/products' => 'products#products'
+  get '/about' => 'about#about'
+  resources :products
+  # resources :products, only [:index, :edit]
+  # resources :products , except [:index]
+
 end

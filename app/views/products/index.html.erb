@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>All products <%= link_to 'Create new', new_product_path, class:'btn btn-default'%></h1>
+  <br>
+     <% unless flash[:notice].blank? %>
+      <div class="alert alert-sucess">
+      <p><%= flash[:notice]%></p>
+      </div>
+     <% end %>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Product</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @products.each do |product| %>
+      <tr>
+        <th scope="row"><%= product.id %></th>
+        <td><%= link_to product.name, products_path(product) %></td>
+        <td><%= product.price %></td>
+        <td>
+          <%= link_to 'Edit', edit_product_path(product), class:'btn btn-sm btn-primary' %>
+          <%= link_to 'Delete', product_path(product), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-sm btn-danger' %>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

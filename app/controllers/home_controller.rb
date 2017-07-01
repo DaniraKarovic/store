@@ -4,12 +4,4 @@ class HomeController < ApplicationController
     @subtitle_message = 'Web shop demo application'
     @product_count = Product.count
   end
-
-  def products
-    @products = Product.all.order(price: :desc)
-  end
-
-  def about
-    @about = 'About'
-  end
 end
