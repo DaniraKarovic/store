@@ -1,0 +1,15 @@
+<%= form_for @product do |form| %>
+<%= form.label :name %>
+<%= form.text_field :name, class:'form-control'%>
+<br>
+<%= form.label :price %>
+<%= form.text_field :price, class:'form-control'%>
+<br>
+<%= form.label :description %>
+<%= form.text_field :description, class:'form-control'%>
+<br>
+<%= form.label :seller_id %>
+<%= form.collection_select :seller_id, Seller.all, :id, :name, { prompt: 'Choose seller'}, class: 'form-control' %>
+<br>
+<%= form.submit params[:action] == 'new' ? 'Save' : 'Update', class:'btn btn-block btn-default'%>
+<% end %>

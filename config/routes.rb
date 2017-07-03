@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   # get '/test' => 'home#test', as: 'nesto'
 
   # get '/products' => 'products#products'
-  get '/about' => 'about#about'
+  # get '/about' => 'abouts#about'
+  resource :about, only: [:show]
   resources :products
   # resources :products, only [:index, :edit]
   # resources :products , except [:index]

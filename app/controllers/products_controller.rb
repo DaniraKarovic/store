@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :find_product, only: [:edit, :update, :show, :destroy]
+
   def index
     @products = Product.all.order(price: :desc)
   end
@@ -19,7 +21,6 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find(params[:id])
   end
 
   def update
@@ -33,11 +34,9 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
   end
 
   def destroy
-    @product = Product.find(params[:id])
     @product.destroy
     flash[:notice] = 'Product deleted successfully!'
     redirect_to products_path
@@ -47,5 +46,9 @@ class ProductsController < ApplicationController
 
   def product_params
     params.require(:product).permit(:name, :price, :description, :seller_id);
+  end
+
+  def find_product
+    @product = Product.find(params[:id])
   end
 end
