@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @title_message = 'Ruby on Rails for beginners 2017'
-    @subtitle_message = 'Web shop demo application'
+    @title_message = 'Lumberjack'
+    @subtitle_message = 'Web store '
     @product_count = Product.count
   end
 end

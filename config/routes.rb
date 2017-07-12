@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # get '/about' => 'abouts#about'
   resource :about, only: [:show]
   resources :products
+  resources :sellers
+  resources :categories
   # resources :products, only [:index, :edit]
   # resources :products , except [:index]
 

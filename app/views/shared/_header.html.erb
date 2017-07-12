@@ -1,16 +1,18 @@
-<div class="navbar navbar-default opaque-navbar">
-  <div class="container-fluid">
+<div class="navbar navbar-default navbar-new">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain">
-        <span class="glyphicon glyphicon-chevron-right" style="color:white;"></span>
+        <span class="glyphicon glyphicon-chevron-left" style="color:white;"></span>
         </button>
-        <a class="navbar-brand" href="#"></a>
+        <%= image_tag 'logo1.png', :class => "brand" %>
     </div>
     <div class="collapse navbar-collapse" id="navMain">
-      <ul class="nav navbar-nav pull-left">
+      <ul class="nav navbar-nav pull-right">
         <li class="<%= 'active' if params[:controller]=='home' && params[:action] == 'index' %>"><%= link_to 'Home', root_path %></li>
         <li class="<%= 'active' if params[:controller]=='products' %>"><%= link_to 'Products', products_path %></li>
-        <li class="<%= 'active' if params[:action] == 'about' %>"><%= link_to 'About', about_path %></li>
+        <li class="<%= 'active' if params[:controller]=='sellers' && params[:action] == 'index' %>"><%= link_to 'Sellers', sellers_path %></li>
+        <li class="<%= 'active' if params[:controller]=='categories' && params[:action] == 'index' %>"><%= link_to 'Category', categories_path %></li>
+        <li class="<%= 'active' if params[:controller]=='abouts' && params[:action] == 'show' %>"><%= link_to 'About', about_path %></li>
       </ul>
     </div>
   </div>

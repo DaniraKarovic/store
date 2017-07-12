@@ -1,7 +1,8 @@
+<div class="home-picture"></div>
 <div class="container">
+  <h1 class="head_title"><%= @title_message %></h1>
   <div class="jumbotron">
-    <h1><%= @title_message %></h1>
-    <h2><%= @subtitle_message %></h2>
-    <p>You can choose from <%= @product_count%> different products.<%= link_to " Start shopping now!", products_path%></p>
+    <h2 class="home_text"><%= @subtitle_message %></h2>
+    <p class="home_text">You can choose from <%= @product_count%> different lumber products.<%= link_to " Get yourself something cozy!", products_path%></p>
   </div>
 </div>

@@ -4,5 +4,6 @@ class AboutsController < ApplicationController
   # end
 
   def show
+    @about = 'About'
   end
 end

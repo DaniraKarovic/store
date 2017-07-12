@@ -1,0 +1,31 @@
+<div class="sellers-picture"></div>
+<div class="container">
+  <div class="row">
+  <div class="col-md-12">
+    <div class="ravnanje-sellers">
+      <h1>Sellers <%= link_to 'Create new', new_seller_path, class:'btn btn-primary'%></h1>
+      <%= count_for @sellers, 'Brands currently in store:' %>
+      <br>
+    </div>
+      <% unless flash[:notice].blank? %>
+        <div class="alert alert-success">
+          <p><%= flash[:notice] %></p>
+        </div>
+      <% end %>
+
+      <h3 class="naslovni-sellers">Sellers</h3>
+   </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Rating</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @sellers %>
+      </tbody>
+    </table>
+  </div>
+</div>
