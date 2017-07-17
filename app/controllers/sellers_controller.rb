@@ -6,7 +6,7 @@ class SellersController < ApplicationController
     end
 
     def show
-      @products = Product.where(seller: @seller)
+      @seller_products = @seller.products
     end
 
     def new

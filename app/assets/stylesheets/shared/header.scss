@@ -1,13 +1,22 @@
 .brand {
-    width: 60px;
+    width: 55px;
     height: 60px;
-    padding-top: 5px;
+    padding: 5px 0;
 }
 
 
 .navbar-new {
   height: 65px;
-  font-family: 'Lobster', cursive;
-  font-size: 20px;
+  font-family: 'Cabin', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
   margin-bottom: 0px;
+}
+
+.log_dugme {
+
+  padding: 10px 0;
+  color: #630A0C;
+  font-size: 16px;
+  font-family: 'Lobster', cursive;
 }

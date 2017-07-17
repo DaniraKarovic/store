@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :products
   resources :sellers
   resources :categories
+  resources :users, only: [:new, :create]
+  resource :session, only: [:new, :create, :destroy]
   # resources :products, only [:index, :edit]
   # resources :products , except [:index]
 
