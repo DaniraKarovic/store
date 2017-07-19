@@ -15,4 +15,10 @@ Rails.application.routes.draw do
   # resources :products, only [:index, :edit]
   # resources :products , except [:index]
 
+
+  namespace :admin do
+      resource :dashboard, only: [:show]
+      resources :products
+    end
+
 end
