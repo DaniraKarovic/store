@@ -7,11 +7,13 @@
           <%= count_for @products, 'Products left in the store:' %>
           <br>
         </div>
-          <% unless flash[:notice].blank? %>
-            <div class="alert alert-success">
-              <p><%= flash[:notice] %></p>
-            </div>
-          <% end %>
+        <% unless flash[:notice].blank? %>
+        <div class="alert alert-success">
+          <p><%= flash[:notice] %></p>
+        </div>
+        <% end %>
+
+        <div id="product-alerts"></div>
 
         <h3 class="naslovni-tekst">Product details</h3>
       </div>

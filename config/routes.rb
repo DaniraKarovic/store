@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
   # resources :products, only [:index, :edit]
   # resources :products , except [:index]
-
+  resources :orders
 
   namespace :admin do
       resource :dashboard, only: [:show]
